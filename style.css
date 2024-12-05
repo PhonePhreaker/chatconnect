@@ -1,6 +1,9 @@
 .text-box {
 	color :white;
-	font-family:Hack;
-
-
+	font-family: Hack;
+	background-color: black;
+	border: 0px;
+	padding: 20px;
+	border-radius: 25px;	 
 }
+
