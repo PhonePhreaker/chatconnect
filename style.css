@@ -1,3 +1,17 @@
+/*
+*	Chat Connect 2024, allstays.com.br	
+*/
+.scroll {
+	margin :auto; 
+	width :50%;
+}
+
+.popup {
+	visibility: hidden;
+	top: -9999px;
+	
+}
+
 .text-box {
 	color :white;
 	font-family: Hack;
