@@ -10,5 +10,5 @@
 <p>At the end of this week the client authentication system should be</p>
 <p>syntax error free</p>
 
-<p>Next iteration, start building or implementation of Fuzzing framework</p>
-<p>for security purposes</p>
+<p>Next iteration, start building on implementation of a Fuzzing framework</p>
+<p>for security purposes.</p>
