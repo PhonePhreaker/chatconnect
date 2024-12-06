@@ -1,47 +1,100 @@
-/*
-*	Chat Connect 2024, allstays.com.br	
-*/
-
-
-
-.code{
-	font-family: courier new;
-	color: grey;
-	background-color: grey;
-	padding-top: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
+#title{
+	position: fixed;
+	bottom: 85vh;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-image: linear-gradient(LightGrey, white);
+	border: 2px;	
+	border-style: ridge;
+	min-height: 10%;
+	min-width: 15%;
 }
+
+#side-bar{
+	left: 0%;
+	position: fixed 
 	
-.class {
-	padding-top: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: linear-gradient(grey, white);
-	color: black;
+	min-width: 10%;
+	min-height: 80%;
+	top: 0vh;
+	bacrkground-repeat: no-repeat;
+	background-image: linear-gradient(LightGrey, white);
+	max-width: 10%;	
+	width: 10%;
 }
-.bold{
+
+#side-bar p{
+	left: 0%;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	font-style: italic;
+}
+
+.text-box{
+	overflown: auto;
+}
+
+foot{
+	font-family: Courrie-New;	
 	color: red;
-	font-weight: bold;	
-}
-.scroll {
-	margin :auto; 
-	width :50%;
-	max-width: 30%;
 }
 
-.popup {
-	visibility: hidden;
-	top: -9999px;
-	position: absolute;
+.feed{
+	top: 10vh;
+	left: 25%;
+	right: 25%;
+	position: relative;
+	max-width: 50%;
+	width: 50%;
+	min-width: 50%;
+	border: 2px;
+	border-color: black;
+	background-color: white; 
+	color: black;	
+	min-height: fit-content;
+	padding-left: 20px;
+	letter-spacing: 1px;	
+	overflow: auto;
+	max-height: fit-content;
+	padding-bottom: 0px;
 }
 
-.text-box {
-	color :white;
-	font-family: Hack;
-	background-color: black;
+.feed button{
+	min-width: 100%;
+	background-color: #383838;
+	color: white;
+}
+.feed h3{
+	color: black;
+	font-weight: bold;
+	
+}
+.feed h4{
+	color: grey;
+}
+
+.code {
+	border-radius: 25;
 	border: 0px;
-	padding: 20px;
-	border-radius: 25px;	 
+	background-repeat: no-repeat;
+	backgroud-image: linear-gradient(rgb(48 48 48) ,Black);
+			
 }
 
+body{
+	background-repeat: no-repeat;
+	background-image: linear-gradient(#536878, #003366);
+	overflow: scroll;
+	padding-bottom: 100px;
+	height: fit-content;
+}
+
+html{
+	overflow: scroll;
+	paddint-bottom: 100px;
+	height: fit-content;
+	min-height: 100vh;
+}

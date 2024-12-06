@@ -1,68 +1,146 @@
-<DOCTYPE !HTML>
+<!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="style.css">
-</head>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="style.css"/>
+	</head>	
 	<body>
-	<div class="feed">
-		
-		<h1>Chat Connect</h1>
-		<h2>O que é o Chat Connect</h2>
-		<div class="text-box">
-		Em sua build primaria(primeira iteração) 
-   		o ChatConnect é  um servidor web com as capacidades
-   		de autenticar usuários mostrar paginas web e de login e acessar bancos 
-   		de dado 
-   		No futuro ele sera usado como framework ou seja uma estrutura para 
-   		criar projetos de automatização como gerenciador de conversas de whatsapp
-   		e email. 
-		</div>
-
-		<h1>Tecnologias e necessidades</h1>
-		<div class="text-box">
-		Servidor cloud<p class="bold">(AWS é gratuito por 12 meses)</p> e após é centavos para manter um 
-		servidor pequeno, rodando Amazon Linux ou sistemas debian se possivel.
+	<!-- Not adding the script to a seconf .js file cause github.io is not being able to fetch it-->
+        <!-- FIX THIS AND MAKE IT ACTUALLY REUSABLE -->        
+		<script>
+									
+                        function min(element, button){
+				
+				if(element.dataset.min == "true"){
+                                	element.setAttribute("style","height: 20px;");	
+					button.innerHTML = "Maximizar";
+					element.dataset.min = false;
+				}else {
+				 	element.setAttribute("style", "height: 85%;");
+					button.innerHTML = "Minimizar";
+					element.dataset.min = true;
+				}
+			}
+                </script>		
 	
-		Java<div class="bold">(linguagem de programacao) (OpenJDK, SpringBoot(Framework Web), Maven(Project Builder),
-		HSQLDB(Banco de Dados)).</div> Todas essas tecnologias são opensource ou seja 
-		livres para uso e distribuição sem modificação do código original(Apache 
-		Liscence).
-		</div>
+	<div id="title-back"><h1 id="title">Chat Connect</h1></div>
 
-		<h1>Iterações</h1>
+	<div class="feed" id="feed1" data-min="true">
+
+		<button onclick="min(document.getElementById('feed1'), document.getElementById('f1button'));" id="f1button">Minimizar</button>
 		<div class="text-box">
-		Uma iteração é necessariamente um periodo de cerca de 1 semana ou mais a
-		qual vai resultar em um sistema rodavel.
+			<h3>Welcome!/Bem Vindo</h3>
+			<h4>Ao ChatConnect...</h4>
+			O que é o ChatConnect?</br>
+			O chat connect em sua primeira iteração está sendo construida
+			como um servidor web o qual vai gerenciar conversas de WhatsApp
+			e serviços de email como Gmail, e autenticação de administradores e assistentes. Automatizando a interação com o cliente
+			e no futuro proximo fazer atualizações a tabelas excel documentos words, etc.
+			e claro fazendo o backup dos mesmos no seu próprio cloud enviroment.
+			E claro um console com uma interface gráfica em paginas web para fácil administração do sistema, e uma documentação
+			detalhada para manuntenção minunciosa de cada peça do programa.
+			<p>os servidores fisicos não vão precisar ser comprados pódem ser facilmente alugados</p>
+			<p>e de graça por 12 meses na cloud AWS</p>			
+				</br>
+			</h5>Quais Tecnologias seram necessarias<h5></br>
+			<ul>
+				<li>Servidores rodando linux preferencialmente distribuições Debian(todas distribuições além das RHEL são gratuitas para uso 
+			inclusive comercial sobre a licença <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU</a>)</li>
+					</br>
+				<li>Java, a linguagem de programção java é amplamente usada no mercado ou seja muito apoiada e mantida por organizações 
+			que distribuem seu código fonte de graça para uso e distribuição. E claro bibliotecas de segurança robustas.
+			Além claro de ela ser extremamente portatil permitindo que o mesmo programa rode em linux, mac ou windows(exemplo
+			Minecraft).</li>		
+					</br>
+				<li>Maven e SpringBoot, Projeto pela apache foundation ele é extremamente util para construir(compilar) projetos 
+			e permitir com que rodem. Enquanto que o springboot é indispensavel para fazer o handeling de web requests 
+			ou seja a base de um servidor web que é ler o que o úsuario(browser) quer e responder com por exemplo uma pagina Web. 
+			é regido pela licença <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache</a> 
+				</li>
+					</br>		 
+				<li>Eclipse, O Eclispe é um editor de texto para programadores com opções e plugins que permitem acelerar
+			o desenvolvimento.
+				</li>
+					</br>
+				<li>Github é uma plataforma que permite desenvolvedores trabalharem na aplicação enquanto clientes monitoram o progresso
+			e adicionam a sua opinião. Com ela é capaz de criar deadlines, branches em um sistema facil de usar mais complexo o suficiente 
+			para se uma ferramenta poderosa para o cliente e para o desenvolvedor
+				</li>
+					</br> 
+			</ul>				
+			
+			
 		</div>
-
-
-		<h1>Porque das tecnologias</h1>
+	</div>
+	<div class="feed" id="feed2" data-min="true">
+		<button onclick="min(document.getElementById('feed2'), document.getElementById('f2button'));" id="f2button">Minimizar</button>
 		<div class="text-box">
-		Java é uma linguagem de programação extremamente poderosa amplamente utilizada
-		para cronstrução de servidores, com amplas ferramentas de segurança.
-		OpenJDK é a biblioteca padrão open source do Java necessaria para construção de
-		programas java, com a licença <a href="https://github.com/openjdk/jdk/blob/master/LICENSE">GNU</a>.
-
-		SpringBoot é um poderoso framework web para fazer o handeling de requests web e assim
-		fazer o display de paginas web, com a licença <a href="https://github.com/spring-projects/spring-boot/blob/main/LICENSE.txt">Apache</a>
-		Maven 		
-		</div> 
-		
-		<a href="tech.html">Como Funciona?</a>
-		
+			<h3>A estrutura do projeto</h3>
+			Primeiro o projeto como todo sistema de software é um projeto o qual é quebrado em niveis de abstração(camadas)
+			Como por exemplo um sistema operacional como Linux, vem primeiro o Kernel com os Drivers, os quais fazem operações de baixo nivel.
+			E em seguida as aplicações de gerenciamento de usuários e grupos como systemd. E em seguida as aplicações como browsers, editores de texto
+			aplicações diretamente utilizadas pelo usuário.</br>
+			
+			Antes de tudo vale explicar que como medida de controle existe um sistema virtual de usuários, arquivos, serviços, pacotes e diretórios
+			Ou seja assim um administrador podera controlar o que os funcionarios estão digitando para o cliente o que eles estão mandando como
+			arquivos. Isso pois o servidor vai ser um Middle Man entre serviços como WhatsApp e os funcionarios. E para isso cada funcionario vai ser um
+			usuário o qual vai ter os proprios arquivos, serviços, pacotes e diretórios.Onde um arquivo é por exemplo um bloco de texto , serviço é um 
+			script ou pequeno programa o qual não precisa mais póde ser escrito pelo usuário. Diretórios(pastas) guardam arquivos e Pacotes arquivos que pódem
+			ser modificados por Serviços.</br>
+			
+			Um serviço padrão que vai vir com todos os usuários é o Indexer o qual vai ler conversas de whatsapp e gerenciar a importância delas 
+			para passar ou não para um funcionario, ou quando passar para um funcionario redigir um texto simples explicando a situação e baseado no banco
+			de dados do servidor melhores maneiras de trabalhar isso.</br>
+			
+			<p>O funcionamento e o desenvolvimento do Indexer vão ser especificados após o servidor base estar pronto.</p>  		
+				</br>
+			No nosso caso por enquanto temos as seguintes classes(Classes no Java representam items no mundo real, ou seja peças que 
+			montam o projeto).
+			
+			<img src="flowchart.png" height="550px" width="400px" alt="flowchart-do-sistema">
+			
+			<ul>
+				<li><h3>net.RequHandle.</h3> Vai efetuar o handeling de request e passar para a aplicação atuando como a porta de entrada
+				para o servidor
+				</li>
+					</br>
+				<li><h3>net.ClientID.</h3> Vai efetuar autententicação de usuários. Permitindo um usuário acessar arquivos e serviços 
+				Nota que um usuário administrador ele vai ter a variavel Acc colocada como <p class="code">"root.* && root.*/"</p> o que significa que
+				ele vai ter acesso os arquivos e serviços de todos outros no sistema. Esses usuários rodam em threads(mini processos da aplicação)
+				que foram registradas no objeto da classe sec.Enviroment. 
+					
+				</li>
+					</br>	
+				<li><h3>SpringBoot(Framework Web).</h3>O framework utilizado para handeling de requests web e para criação dos Java Beans.
+					
+				</li>
+					</br>
+				<li><h3>res.db.Query</h3>A classe Query vai ser contatada pela classe ClientID, Query vai autenttcar o usuario com a classe Eviroment
+				assim vai retornar uma classe Session a qual é um periodo de tempo onde o usuário póde usar uma sessionid dado pelo url acessado 
+				ou um cookie para usar um usuarion, Nota que Sessions devem trabalhar com os Objetos Users que são os usuários no sisstema de
+				arquivos virtual
+				
+				</li>
+					</br>
+				<li><h3>sec.Enviroment</h3>Vai ser um único objeto o qual vai controlar acesso de threads Usuarios a sistemas nota que para criar
+				arquivos, serviços isso é feito pela classe Fs porém com a authentificação da classe Enviroment.
+				</li>
+					</br>
+				<li><h3>res.Pages</h3>É um tipo de classe que contem arquivos html(pagina web). 
+				</li>
+					</br>
+				<li><h3>res.db.DbHyper</h3>Interface para o banco de dados HSQLDB. Ou seja administrar a um nivel baixo de abstração(sem o conceito de
+					usários os recursos da aplicação. Nota que as classes com acesso a isso são em baixa quantidade por segurança e
+					praticidade
+				</li>
+			</ul>		
+		</div>	
 	</div>	
-	<div id="popup">NOTE: Essa pagina não está sendo rodada nos servidores chatconnect aínda.</div>
-	
-	<script>
-		console.log("test console");
-		let get = document.getElementById("popup");
-		get.animate([
-			{top: 100vh;},	
-			{top: 80vh;}
-		]);
-	</script>
-	
+	<!--<div id="side-bar">-->
+	<!--	<p>Test</p>-->
+	<!--</div>-->
 	</body>
-<foot>
-</foot>
+	<foot>
+			
+	</foot>
 </html>
